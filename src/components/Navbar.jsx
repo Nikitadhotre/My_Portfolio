@@ -43,23 +43,9 @@ const Navbar = ({ theme, toggleTheme }) => {
           <a
             href="#home"
             onClick={(e) => scrollToSection(e, '#home')}
-            className="flex items-center gap-1"
-            aria-label="Nikita"
+            className="px-2 py-1 text-xl text-gray-800 dark:text-white logo-font"
           >
-            <svg
-              width="120"
-              height="32"
-              viewBox="0 0 120 32"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-7 w-auto"
-              role="img"
-              aria-hidden="true"
-            >
-              <text x="0" y="24" fontFamily="'Courier New', monospace" fontSize="14" fontWeight="400" fill="currentColor">{'<'}</text>
-              <text x="18" y="24" fontFamily="'Agustina', cursive" fontSize="24" fontWeight="400" fill="currentColor">Nikita</text>
-              <text x="100" y="24" fontFamily="'Courier New', monospace" fontSize="14" fontWeight="400" fill="currentColor">{'/>'}</text>
-            </svg>
+            {'<'} Nikita {'/>'}
           </a>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -68,9 +54,10 @@ const Navbar = ({ theme, toggleTheme }) => {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-cyan-400 transition-colors"
+                className="relative text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-cyan-400 transition-colors group pb-1"
               >
                 {link.name}
+                <span className="absolute left-0 bottom-0.5 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
             <button
@@ -117,9 +104,10 @@ const Navbar = ({ theme, toggleTheme }) => {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-cyan-400 transition-colors"
+                className="relative block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-cyan-400 transition-colors group pb-2"
               >
                 {link.name}
+                <span className="absolute left-3 bottom-1 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-16"></span>
               </a>
             ))}
           </div>

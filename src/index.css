@@ -20,4 +20,11 @@
   .delay-700 {
     animation-delay: 700ms;
   }
+
+  .logo-font {
+    font-family: 'Source Code Pro', cursive;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size:x-large;
+  }
 }
