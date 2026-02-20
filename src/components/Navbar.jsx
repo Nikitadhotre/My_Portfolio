@@ -43,9 +43,12 @@ const Navbar = ({ theme, toggleTheme }) => {
           <a
             href="#home"
             onClick={(e) => scrollToSection(e, '#home')}
-            className="px-2 py-1 text-xl text-gray-800 dark:text-white logo-font"
+            className="flex items-center text-xl logo-font text-gray-800 dark:text-white"
+            aria-label="Nikita"
           >
-            {'<'} Nikita {'/>'}
+            <span className="text-blue-600 dark:text-cyan-400">{String.fromCharCode(60)}</span>
+            <span className="mx-1">Nikita</span>
+            <span className="text-blue-600 dark:text-cyan-400">{String.fromCharCode(47, 62)}</span>
           </a>
 
           <div className="hidden md:flex items-center space-x-8">

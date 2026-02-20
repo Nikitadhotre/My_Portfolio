@@ -1,5 +1,5 @@
-import { Code2, Palette, Zap, Award } from 'lucide-react';
-import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import { Code2, Palette, Zap, Award } from "lucide-react";
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 const About = () => {
   const [ref, isVisible] = useIntersectionObserver();
@@ -11,61 +11,78 @@ const About = () => {
     { icon: Palette, label: 'Happy Clients', value: '30+' },
   ]; */
 
-  const skills = [
-    'JavaScript', 'React', 'Node.js', 'Express', 'MongoDB',
-    'PostgreSQL', 'Tailwind CSS', 'Git', 'REST APIs', 'Docker'
-  ];
+  // const skills = [
+  //   "JavaScript",
+  //   "React",
+  //   "Node.js",
+  //   "Express",
+  //   "MongoDB",
+  //   "PostgreSQL",
+  //   "Tailwind CSS",
+  //   "Git",
+  //   "REST APIs",
+  //   "Docker",
+  // ];
 
   return (
-    <section id="about" className="py-20 bg-white dark:bg-gray-900">
+    <section id="about" className="py-12 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           ref={ref}
           className={`transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900 dark:text-white">
-            About <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Me</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 text-gray-900 dark:text-white">
+            About{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+              Me
+            </span>
           </h2>
-          <p className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
-            Passionate developer dedicated to creating exceptional digital experiences
-          </p>
+          {/* <p className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
+            Passionate developer dedicated to creating exceptional digital
+            experiences
+          </p> */}
 
           <div className="grid md:grid-cols-2 gap-6 mb-16">
-              <div className="mb-8 relative inline-block flex flex-col justify-center items-center">
+            <div className="mb-8 relative inline-block flex flex-col justify-center items-center">
               <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-blue-600 dark:border-cyan-400 shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                  <img
-                    src="/Public/Nikita_Dhotre_Passport.jpg"
-                    alt="Profile"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+                <img
+                  src="/Public/Nikita_Dhotre_Passport.jpg"
+                  alt="Profile"
+                  className="w-full h-full object-cover"
+                />
+              </div>
               {/* <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg">
                 Available for work
               </div> */}
-              </div>
+            </div>
 
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                My Story
-              </h3>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                I'm a full-stack developer with a passion for building beautiful, functional web applications.
-                With over 5 years of experience in the industry, I've had the opportunity to work on diverse
-                projects ranging from e-commerce platforms to social media applications.
-              </p>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                I specialize in the MERN stack and modern JavaScript frameworks, always staying up-to-date
-                with the latest technologies and best practices. I believe in writing clean, maintainable
-                code and creating user experiences that delight.
-              </p>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source
-                projects, or sharing my knowledge through blog posts and tutorials.
+                I am a Final Year Computer Science Engineering student with a
+                strong passion for full-stack web development and building
+                real-world applications. I enjoy turning ideas into functional
+                and user-friendly products using modern JavaScript technologies
+                and structured development practices.
               </p>
 
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                I have hands-on experience with MongoDB, Express.js, React.js,
+                and Node.js, building secure authentication systems, RESTful
+                APIs, and responsive user interfaces using Tailwind CSS. I focus
+                on writing clean, maintainable code, designing scalable backend
+                architectures, and applying best practices in database design
+                and API integration. I use Git for version control and Postman
+                for API testing to ensure efficient and organized development
+                workflows.
+              </p>
+
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                I am currently seeking an entry-level Software Developer role where I can contribute to meaningful applications, collaborate with a team, and continue growing as a developer.
+              </p>
+
+              {/* <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 Skills & Technologies
               </h3>
               <div className="flex flex-wrap gap-3">
@@ -77,7 +94,7 @@ const About = () => {
                     {skill}
                   </span>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
 

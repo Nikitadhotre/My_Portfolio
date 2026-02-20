@@ -5,18 +5,36 @@ import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 const sampleProjects = [
   {
     id: 1,
-    title: 'Portfolio Website',
+    title: 'CaseMate',
     description: 'A personal portfolio website showcasing my skills and projects using React and Tailwind CSS.',
-    image_url: '/images/portfolio-screenshot.png',
+    image_url: '/Public/CaseMate_image.png',
     tech_stack: ['React', 'Tailwind CSS', 'JavaScript'],
     github_url: 'https://github.com/username/portfolio',
     live_url: 'https://username.github.io/portfolio',
   },
   {
     id: 2,
-    title: 'E-commerce Store',
+    title: 'Portfolio',
     description: 'A full-featured e-commerce store with shopping cart, user authentication, and payment integration.',
-    image_url: '/images/ecommerce-screenshot.png',
+    image_url: '/Public/Portfolio_image.png',
+    tech_stack: ['Next.js', 'Stripe', 'MongoDB'],
+    github_url: 'https://github.com/username/ecommerce-store',
+    live_url: 'https://ecommerce-store.example.com',
+  },
+  {
+    id: 3,
+    title: 'Arogyapath',
+    description: 'A full-featured e-commerce store with shopping cart, user authentication, and payment integration.',
+    image_url: '/Public/Arogyapath_image.png',
+    tech_stack: ['Next.js', 'Stripe', 'MongoDB'],
+    github_url: 'https://github.com/username/ecommerce-store',
+    live_url: 'https://ecommerce-store.example.com',
+  },
+  {
+    id: 4,
+    title: 'Career Guide',
+    description: 'A full-featured e-commerce store with shopping cart, user authentication, and payment integration.',
+    image_url: '/Public/Career_Guidance_image.png',
     tech_stack: ['Next.js', 'Stripe', 'MongoDB'],
     github_url: 'https://github.com/username/ecommerce-store',
     live_url: 'https://ecommerce-store.example.com',
@@ -46,31 +64,55 @@ const Projects = () => {
            Showcasing my latest work and creative solutions
          </p>
 
-         <div className="grid md:grid-cols-2 gap-8">
+         <div className="grid md:grid-cols-3 gap-8">
            {sampleProjects.map((project, index) => (
              <div
                key={project.id}
-               className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
+               className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 dark:hover:shadow-cyan-500/30 transform hover:-translate-y-2 transition-all duration-300 ease-out"
                style={{ animationDelay: `${index * 100}ms` }}
              >
                <div className="relative h-64 overflow-hidden">
                  <img
                    src={project.image_url}
                    alt={project.title}
-                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
                  />
-                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out"></div>
                </div>
 
                <div className="p-6">
-                 <h3 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white">
-                   {project.title}
-                 </h3>
+                 <div className="flex items-center justify-between mb-3">
+                   <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">
+                     {project.title}
+                   </h3>
+                   <div className="flex gap-2">
+                     {project.github_url && (
+                       <a
+                         href={project.github_url}
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         className="p-2 text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-cyan-400 transition-colors"
+                       >
+                         <Github className="w-5 h-5" />
+                       </a>
+                     )}
+                     {project.live_url && (
+                       <a
+                         href={project.live_url}
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         className="p-2 text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-cyan-400 transition-colors"
+                       >
+                         <ExternalLink className="w-5 h-5" />
+                       </a>
+                     )}
+                   </div>
+                 </div>
                  <p className="text-gray-600 dark:text-gray-400 mb-4">
                    {project.description}
                  </p>
 
-                 <div className="flex flex-wrap gap-2 mb-4">
+                 <div className="flex flex-wrap gap-2">
                    {project.tech_stack?.map((tech, techIndex) => (
                      <span
                        key={techIndex}
@@ -79,31 +121,6 @@ const Projects = () => {
                        {tech}
                      </span>
                    ))}
-                 </div>
-
-                 <div className="flex gap-4">
-                   {project.github_url && (
-                     <a
-                       href={project.github_url}
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       className="flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
-                     >
-                       <Github className="w-4 h-4" />
-                       Code
-                     </a>
-                   )}
-                   {project.live_url && (
-                     <a
-                       href={project.live_url}
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg hover:shadow-lg transition-shadow"
-                     >
-                       <ExternalLink className="w-4 h-4" />
-                       Live Demo
-                     </a>
-                   )}
                  </div>
                </div>
              </div>

@@ -7,9 +7,9 @@ const Experience = () => {
   const timeline = [
     {
       type: 'work',
-      title: 'Backend Developer Intern',
+      title: 'Full Stack Developer Intern',
       organization: 'FarmsEasy',
-      period: 'Nov 2025 - Present',
+      period: 'Oct 2025 - Present',
       description: 'Developed custom web solutions for clients across various industries. Collaborated with designers and project managers.',
       achievements: [
         'Delivered 20+ client projects',
@@ -23,7 +23,7 @@ const Experience = () => {
       type: 'education',
       title: 'B.Tech Computer Science & Engineering',
       organization: 'Deogiri Institute of Engineering and Management Studies, Chh. Sambhajinagar, Maharashtra [DIEMS]',
-      period: '2022 - 2026',
+      period: 'Nov 2022 - 2026',
       description: 'Graduated with honors. Focused on software engineering and web development.',
       achievements: [
         'CGPA: 6.5/10',
@@ -98,20 +98,6 @@ const Experience = () => {
                     {item.type === 'education' ? (
                       <>
                         <p className="text-blue-600 dark:text-cyan-400 font-semibold text-xl mb-1 flex items-center gap-2">
-                          {/* <div className="rounded-md border-2 border-blue-600 dark:border-cyan-600 p-3 inline-flex items-center justify-center w-16 h-16">
-                            <div className="bg-white dark:bg-gray-800 rounded-full p-1 w-14 h-14 flex items-center justify-center">
-                              {item.logo ? (
-                                <img
-                                  src={item.logo}
-                                  alt={`${item.organization} logo`}
-                                  className="w-16 h-16 object-contain rounded-full"
-                                  loading="lazy"
-                                />
-                              ) : (
-                                <GraduationCap className="w-16 h-16 text-blue-600 dark:text-cyan-400" />
-                              )}
-                            </div>
-                          </div> */}
                           {item.organization}
                         </p>
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">{item.title}</h3>
@@ -119,20 +105,6 @@ const Experience = () => {
                     ) : (
                       <>
                         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1 flex items-center gap-2">
-                          {/* <div className="rounded-md border-2 border-blue-600 dark:border-cyan-600 p-3 inline-flex items-center justify-center w-16 h-16">
-                            <div className="bg-white dark:bg-gray-800 rounded-full p-1 w-14 h-14 flex items-center justify-center">
-                              {item.logo ? (
-                                <img
-                                  src={item.logo}
-                                  alt={`${item.title} icon`}
-                                  className="w-16 h-16 object-contain rounded-full"
-                                  loading="lazy"
-                                />
-                              ) : (
-                                <Briefcase className="w-16 h-16 text-gray-900 dark:text-white" />
-                              )}
-                            </div>
-                          </div> */}
                           {item.title}
                         </h3>
                         <p className="text-blue-600 dark:text-cyan-400 font-semibold mb-1">{item.organization}</p>
@@ -152,8 +124,7 @@ const Experience = () => {
                         rel="noopener noreferrer"
                         className="inline-flex items-center mt-3 text-indigo-600 dark:text-indigo-400 font-semibold text-sm hover:text-indigo-800 dark:hover:text-indigo-600 transition-colors"
                       >
-                        Visit Website
-                        <ExternalLink className="w-4 h-4 ml-1" />
+                        <ExternalLink className="w-5 h-5" />
                       </a>
                     )}
                   </div>
