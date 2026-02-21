@@ -125,7 +125,7 @@ const Projects = () => {
                    {project.tech_stack?.map((tech, techIndex) => (
                      <span
                        key={techIndex}
-                       className="px-3 py-1 text-xs bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-blue-400/20 dark:to-cyan-400/20 border border-blue-600/20 dark:border-cyan-400/20 rounded-full text-gray-800 dark:text-gray-200"
+                       className="px-3 py-1 text-xs bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-blue-400/20 dark:to-cyan-400/20 border border-blue-600/20 dark:border-cyan-400/20 rounded-md text-gray-800 dark:text-gray-200"
                      >
                        {tech}
                      </span>

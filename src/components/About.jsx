@@ -26,7 +26,7 @@ const About = () => {
 
   return (
     <section id="about" className="py-12 bg-white dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           ref={ref}
           className={`transition-all duration-1000 ${
@@ -59,7 +59,7 @@ const About = () => {
             </div>
 
             <div className="space-y-6">
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-gray-600 text-sm dark:text-gray-400 leading-relaxed">
                 I am a Final Year Computer Science Engineering student with a
                 strong passion for full-stack web development and building
                 real-world applications. I enjoy turning ideas into functional
@@ -67,7 +67,7 @@ const About = () => {
                 and structured development practices.
               </p>
 
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-gray-600 text-sm dark:text-gray-400 leading-relaxed">
                 I have hands-on experience with MongoDB, Express.js, React.js,
                 and Node.js, building secure authentication systems, RESTful
                 APIs, and responsive user interfaces using Tailwind CSS. I focus
@@ -78,7 +78,7 @@ const About = () => {
                 workflows.
               </p>
 
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-gray-600 text-sm dark:text-gray-400 leading-relaxed">
                 I am currently seeking an entry-level Software Developer role where I can contribute to meaningful applications, collaborate with a team, and continue growing as a developer.
               </p>
 
