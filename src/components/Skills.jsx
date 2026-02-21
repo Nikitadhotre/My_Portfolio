@@ -441,16 +441,12 @@ const Skills = () => {
         {
           name: "Postman",
           icon: () => (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              x="0px"
-              y="0px"
-               width="50"
+            <img
+              src="/Public/Postman.svg"
+              alt="Postman"
+              width="50"
               height="50"
-              viewBox="0 0 30 30"
-            >
-              <path d="M512 282.8C512 439.4 397 512 263.2 512c-124.6 0-263.2-93.5-263.2-229.2 0-141.7 131.3-282.8 263.2-282.8C395.7 0 512 121.1 512 282.8z" />
-            </svg>
+            />
           ),
           level: 75,
         },
@@ -580,7 +576,7 @@ const Skills = () => {
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl">
+                    <div className="p-2 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl">
                       <Icon className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white">
