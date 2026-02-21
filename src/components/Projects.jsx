@@ -18,7 +18,7 @@ const sampleProjects = [
     description: 'A full-featured e-commerce store with shopping cart, user authentication, and payment integration.',
     image_url: '/Public/Portfolio_image.png',
     tech_stack: ['Next.js', 'Stripe', 'MongoDB'],
-    github_url: 'https://github.com/username/ecommerce-store',
+    github_url: 'https://github.com/Nikitadhotre/My_Portfolio.git',
     live_url: 'https://ecommerce-store.example.com',
   },
   {
@@ -37,6 +37,15 @@ const sampleProjects = [
     image_url: '/Public/Career_Guidance_image.png',
     tech_stack: ['Next.js', 'Stripe', 'MongoDB'],
     github_url: 'https://github.com/username/ecommerce-store',
+    live_url: 'https://ecommerce-store.example.com',
+  },
+  {
+    id: 5,
+    title: 'Nourish Together',
+    description: 'A full-featured e-commerce store with shopping cart, user authentication, and payment integration.',
+    image_url: '/Public/Nourish_Together_image.png',
+    tech_stack: ['Next.js', 'Stripe', 'MongoDB'],
+    github_url: 'https://github.com/Nikitadhotre/Nourish_Together.git',
     live_url: 'https://ecommerce-store.example.com',
   },
   // Add more sample projects here
@@ -71,7 +80,7 @@ const Projects = () => {
                className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 dark:hover:shadow-cyan-500/30 transform hover:-translate-y-2 transition-all duration-300 ease-out"
                style={{ animationDelay: `${index * 100}ms` }}
              >
-               <div className="relative h-64 overflow-hidden">
+               <div className="relative h-58 overflow-hidden">
                  <img
                    src={project.image_url}
                    alt={project.title}
@@ -82,7 +91,7 @@ const Projects = () => {
 
                <div className="p-6">
                  <div className="flex items-center justify-between mb-3">
-                   <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">
+                   <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">
                      {project.title}
                    </h3>
                    <div className="flex gap-2">
@@ -108,7 +117,7 @@ const Projects = () => {
                      )}
                    </div>
                  </div>
-                 <p className="text-gray-600 dark:text-gray-400 mb-4">
+                 <p className="text-gray-600 text-xs dark:text-gray-400 mb-4">
                    {project.description}
                  </p>
 
@@ -116,7 +125,7 @@ const Projects = () => {
                    {project.tech_stack?.map((tech, techIndex) => (
                      <span
                        key={techIndex}
-                       className="px-3 py-1 text-sm bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-blue-400/20 dark:to-cyan-400/20 border border-blue-600/20 dark:border-cyan-400/20 rounded-full text-gray-800 dark:text-gray-200"
+                       className="px-3 py-1 text-xs bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-blue-400/20 dark:to-cyan-400/20 border border-blue-600/20 dark:border-cyan-400/20 rounded-full text-gray-800 dark:text-gray-200"
                      >
                        {tech}
                      </span>

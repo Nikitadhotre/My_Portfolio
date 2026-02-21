@@ -579,7 +579,7 @@ const Skills = () => {
                     <div className="p-2 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl">
                       <Icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">
                       {category.title}
                     </h3>
                   </div>
@@ -629,7 +629,7 @@ const Skills = () => {
                               width="50" height="50" className="object-contain"
                             />
                           ) : null}
-                          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                          <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
                             {skill.name}
                           </span>
                         </div>
