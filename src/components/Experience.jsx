@@ -10,8 +10,6 @@ const Experience = () => {
       title: 'Full Stack Developer Intern',
       organization: 'FarmsEasy',
       period: 'Oct 2025 – Present',
-      description:
-        'Contributing to web application development by working on backend logic, API integration, database operations, and responsive frontend components while collaborating with the team using version control and API testing tools.',
       achievements: [
         'Developed and maintained 20+ RESTful APIs following MVC architecture',
         'Designed and optimized PostgreSQL schemas using efficient query structures to improve performance',
@@ -27,8 +25,6 @@ const Experience = () => {
       organization:
         'Deogiri Institute of Engineering and Management Studies, Chh. Sambhajinagar, Maharashtra [DIEMS]',
       period: 'Nov 2022 – 2026',
-      description:
-        'Pursuing B.Tech in Computer Science with a strong foundation in DBMS, Operating Systems, Computer Networks, and software development principles.',
       achievements: ['CGPA: 6.5/10'],
     },
     {
@@ -36,8 +32,6 @@ const Experience = () => {
       title: 'HSC Science (Computer Science)',
       organization: 'Deogiri College, Chh. Sambhajinagar, Maharashtra',
       period: 'Sep 2020 – Mar 2022',
-      description:
-        'Completed Higher Secondary Education in Science with Computer Science, building strong fundamentals in programming, mathematics, and analytical thinking.',
       achievements: ['Percentage: 81.67%'],
     },
     {
@@ -46,8 +40,6 @@ const Experience = () => {
       organization:
         'Gajanan Bahuuddeshiya School, Chh. Sambhajinagar, Maharashtra',
       period: 'Jun 2019 – Mar 2020',
-      description:
-        'Completed Secondary School Certificate with strong academic performance and a solid foundation in mathematics and science.',
       achievements: ['Percentage: 85.60%'],
     },
   ];
@@ -101,7 +93,7 @@ const Experience = () => {
                     className={`inline-block px-3 py-1 text-xs font-semibold rounded-full mb-2 border ${
                       item.type === 'work'
                         ? 'bg-gradient-to-r from-blue-600/10 to-cyan-600/10 text-blue-600 dark:text-cyan-400 border-blue-600/20 dark:border-cyan-400/20'
-                        : 'bg-gradient-to-r from-purple-600/10 to-pink-600/10 text-purple-600 dark:text-pink-400 border-purple-600/20 dark:border-pink-400/20'
+                        : 'bg-gradient-to-r from-blue-600/10 to-cyan-600/10 text-blue-600 dark:text-cyan-400 border-blue-600/20 dark:border-cyan-400/20'
                     }`}
                   >
                     {item.type === 'work'
@@ -119,7 +111,7 @@ const Experience = () => {
                     className={`font-semibold mt-1 text-sm ${
                       item.type === 'work'
                         ? 'text-blue-600 dark:text-cyan-400'
-                        : 'text-purple-600 dark:text-pink-400'
+                        : 'text-blue-600 dark:text-cyan-400'
                     }`}
                   >
                     {item.organization}

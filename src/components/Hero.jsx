@@ -6,7 +6,7 @@ const Hero = () => {
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
-  const [typingSpeed, setTypingSpeed] = useState(150);
+  const [typingSpeed, setTypingSpeed] = useState(100);
 
   const phrases = ['Full Stack Developer','Software Engineer', 'Frontend Developer', 'Backend Developer' , 'Data Analyst Enthusiast'];
 
@@ -21,7 +21,7 @@ const Hero = () => {
           : fullText.substring(0, text.length + 1)
       );
 
-      setTypingSpeed(isDeleting ? 50 : 150);
+      setTypingSpeed(isDeleting ? 40 : 100);
 
       if (!isDeleting && text === fullText) {
         setTimeout(() => setIsDeleting(true), 2000);
@@ -66,7 +66,7 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <a
-              href="https://drive.google.com/file/d/1jbmn6tTRbZhp0DXPJH5RwU7Nq1VqCSji/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1Kg4HuQ2H_-C93PbKdCWtec8SzAo8UMsS/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full font-semibold hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 justify-center"

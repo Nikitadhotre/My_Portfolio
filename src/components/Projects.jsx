@@ -3,51 +3,56 @@ import { ExternalLink, Github } from 'lucide-react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 const sampleProjects = [
-  {
-    id: 1,
-    title: 'CaseMate',
-    description: 'A personal portfolio website showcasing my skills and projects using React and Tailwind CSS.',
-    image_url: '/Public/CaseMate_image.png',
-    tech_stack: ['React', 'Tailwind CSS', 'JavaScript'],
-    github_url: 'https://github.com/username/portfolio',
-    live_url: 'https://username.github.io/portfolio',
-  },
-  {
-    id: 2,
-    title: 'Portfolio',
-    description: 'A full-featured e-commerce store with shopping cart, user authentication, and payment integration.',
-    image_url: '/Public/Portfolio_image.png',
-    tech_stack: ['Next.js', 'Stripe', 'MongoDB'],
-    github_url: 'https://github.com/Nikitadhotre/My_Portfolio.git',
-    live_url: 'https://ecommerce-store.example.com',
-  },
-  {
-    id: 3,
-    title: 'Arogyapath',
-    description: 'A full-featured e-commerce store with shopping cart, user authentication, and payment integration.',
-    image_url: '/Public/Arogyapath_image.png',
-    tech_stack: ['Next.js', 'Stripe', 'MongoDB'],
-    github_url: 'https://github.com/username/ecommerce-store',
-    live_url: 'https://ecommerce-store.example.com',
-  },
-  {
-    id: 4,
-    title: 'Career Guide',
-    description: 'A full-featured e-commerce store with shopping cart, user authentication, and payment integration.',
-    image_url: '/Public/Career_Guidance_image.png',
-    tech_stack: ['Next.js', 'Stripe', 'MongoDB'],
-    github_url: 'https://github.com/username/ecommerce-store',
-    live_url: 'https://ecommerce-store.example.com',
-  },
-  {
-    id: 5,
-    title: 'Nourish Together',
-    description: 'A full-featured e-commerce store with shopping cart, user authentication, and payment integration.',
-    image_url: '/Public/Nourish_Together_image.png',
-    tech_stack: ['Next.js', 'Stripe', 'MongoDB'],
-    github_url: 'https://github.com/Nikitadhotre/Nourish_Together.git',
-    live_url: 'https://ecommerce-store.example.com',
-  },
+{
+  id: 1,
+  title: 'CaseMate',
+  description:
+    'A responsive web application for managing and tracking case-related information with a clean UI, dynamic components, and structured data handling.',
+  image_url: '/Public/CaseMate_image.png',
+  tech_stack: ['React', 'Tailwind CSS', 'JavaScript'],
+  github_url: 'https://github.com/username/portfolio',
+  live_url: 'https://username.github.io/portfolio',
+},
+{
+  id: 2,
+  title: 'Portfolio',
+  description:
+    'A personal developer portfolio built with a modern UI, dark/light theme, animated sections, and optimized component-based architecture to showcase projects and technical skills.',
+  image_url: '/Public/Portfolio_image.png',
+  tech_stack: ['React', 'Tailwind CSS', 'JavaScript'],
+  github_url: 'https://github.com/Nikitadhotre/My_Portfolio.git',
+  live_url: 'https://ecommerce-store.example.com',
+},
+{
+  id: 3,
+  title: 'Arogyapath',
+  description:
+    'A health management system that tracks vaccination records, provides automated reminders, supports doctor verification, and includes role-based authentication with secure data handling.',
+  image_url: '/Public/Arogyapath_image.png',
+  tech_stack: ['React', 'Node.js', 'Express', 'MongoDB'],
+  github_url: 'https://github.com/username/ecommerce-store',
+  live_url: 'https://ecommerce-store.example.com',
+},
+{
+  id: 4,
+  title: 'Career Guide',
+  description:
+    'A career guidance platform that helps users explore career paths, view structured information, and access resources through an intuitive and responsive interface.',
+  image_url: '/Public/Career_Guidance_image.png',
+  tech_stack: ['React', 'Node.js', 'Express', 'MongoDB'],
+  github_url: 'https://github.com/username/ecommerce-store',
+  live_url: 'https://ecommerce-store.example.com',
+},
+{
+  id: 5,
+  title: 'Nourish Together',
+  description:
+    'A community-driven web platform designed to connect food donors with people in need, featuring structured data management and a user-friendly interface for resource sharing.',
+  image_url: '/Public/Nourish_Together_image.png',
+  tech_stack: ['React', 'Node.js', 'Express', 'MongoDB'],
+  github_url: 'https://github.com/Nikitadhotre/Nourish_Together.git',
+  live_url: 'https://ecommerce-store.example.com',
+},
   // Add more sample projects here
 ];
 

@@ -9,6 +9,7 @@ const corsHeaders = {
 interface ContactFormData {
   name: string;
   email: string;
+  subject: string;
   message: string;
 }
 
@@ -29,7 +30,7 @@ Deno.serve(async (req: Request) => {
       const body: ContactFormData = await req.json();
       
       // Validate input
-      if (!body.name || !body.email || !body.message) {
+      if (!body.name || !body.email || !body.subject || !body.message) {
         return new Response(
           JSON.stringify({ error: 'Missing required fields' }),
           {
@@ -64,6 +65,7 @@ Deno.serve(async (req: Request) => {
           {
             name: body.name,
             email: body.email,
+            subject: body.subject,
             message: body.message,
           },
         ])
