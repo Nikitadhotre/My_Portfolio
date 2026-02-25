@@ -78,14 +78,14 @@ const Projects = () => {
            Showcasing my latest work and creative solutions
          </p>
 
-         <div className="grid md:grid-cols-3 gap-8">
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
            {sampleProjects.map((project, index) => (
              <div
                key={project.id}
                className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 dark:hover:shadow-cyan-500/30 transform hover:-translate-y-2 transition-all duration-300 ease-out"
                style={{ animationDelay: `${index * 100}ms` }}
              >
-               <div className="relative h-58 overflow-hidden">
+              <div className="relative h-48 sm:h-52 md:h-58 overflow-hidden">
                  <img
                    src={project.image_url}
                    alt={project.title}

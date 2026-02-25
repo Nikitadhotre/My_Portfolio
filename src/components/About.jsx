@@ -44,9 +44,9 @@ const About = () => {
             experiences
           </p> */}
 
-          <div className="grid md:grid-cols-2 gap-6 mb-16">
-            <div className="mb-8 relative inline-block flex flex-col justify-center items-center">
-              <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-blue-600 dark:border-cyan-400 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-6 mb-12 md:mb-16">
+            <div className="mb-6 sm:mb-8 relative flex flex-col justify-center items-center">
+              <div className="w-48 sm:w-56 md:w-64 lg:w-80 h-48 sm:h-56 md:h-64 lg:h-80 rounded-full overflow-hidden border-4 border-blue-600 dark:border-cyan-400 shadow-2xl transform hover:scale-105 transition-transform duration-300">
                 <img
                   src="/Public/Nikita_Dhotre_Passport.jpg"
                   alt="Profile"

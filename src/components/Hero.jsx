@@ -62,16 +62,16 @@ const Hero = () => {
         <div className="text-center">
           
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-2 text-gray-900 dark:text-white">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-2 text-gray-900 dark:text-white">
             Hi, I'm <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Nikita Dhotre</span>
           </h1>
 
-          <div className="text-2xl md:text-4xl mb-8 text-gray-700 dark:text-gray-300 h-12">
+          <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-6 sm:mb-8 text-gray-700 dark:text-gray-300 h-10 sm:h-12">
             <span className="font-semibold">{text}</span>
             <span className="animate-pulse">|</span>
           </div>
 
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 sm:mb-12 max-w-2xl mx-auto px-4 sm:px-0">
             Crafting beautiful, functional, and user-friendly digital experiences with modern technologies and best practices.
           </p>
 
