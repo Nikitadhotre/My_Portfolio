@@ -1,33 +1,40 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { Mail, MapPin, Phone, Send, CheckCircle, XCircle } from "lucide-react";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
+// EmailJS Configuration - Replace these with your actual values
+const EMAILJS_SERVICE_ID = "service_3elrwjj";
+const EMAILJS_TEMPLATE_ID = "template_3dn2jzu";
+const EMAILJS_PUBLIC_KEY = "0xyFlsTpYb_IlUKMd";
+
 const Contact = () => {
+  const formRef = useRef(null);
   const [ref, isVisible] = useIntersectionObserver();
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    from_name: "",
+    from_email: "",
     subject: "",
     message: "",
   });
   const [errors, setErrors] = useState({});
-  const [submitting, setSubmitting] = useState(false);
+  const [isSending, setIsSending] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
   const validateForm = () => {
     const newErrors = {};
 
-    if (!formData.name.trim()) {
-      newErrors.name = "Name is required";
-    } else if (formData.name.trim().length < 2) {
-      newErrors.name = "Name must be at least 2 characters";
+    if (!formData.from_name.trim()) {
+      newErrors.from_name = "Name is required";
+    } else if (formData.from_name.trim().length < 2) {
+      newErrors.from_name = "Name must be at least 2 characters";
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
-    } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = "Please enter a valid email";
+    if (!formData.from_email.trim()) {
+      newErrors.from_email = "Email is required";
+    } else if (!emailRegex.test(formData.from_email)) {
+      newErrors.from_email = "Please enter a valid email";
     }
 
     if (!formData.subject) {
@@ -59,36 +66,32 @@ const Contact = () => {
       return;
     }
 
-    setSubmitting(true);
+    setIsSending(true);
     setSubmitStatus(null);
 
     try {
-      const apiUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/submit-contact`;
-      const response = await fetch(apiUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
-        },
-        body: JSON.stringify(formData),
-      });
+      // Send email via EmailJS
+      // Note: Reply-To is set in EmailJS template using {{from_email}}
+      const result = await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        EMAILJS_PUBLIC_KEY
+      );
 
-      const data = await response.json();
-
-      if (response.ok) {
+      if (result.status === 200) {
         setSubmitStatus("success");
-        setFormData({ name: "", email: "", subject: "", message: "" });
+        setFormData({ from_name: "", from_email: "", subject: "", message: "" });
         setTimeout(() => setSubmitStatus(null), 5000);
       } else {
-        setSubmitStatus("error");
-        setTimeout(() => setSubmitStatus(null), 5000);
+        throw new Error("Failed to send email");
       }
     } catch (error) {
-      console.error("Error submitting form:", error);
+      console.error("Error sending email:", error);
       setSubmitStatus("error");
       setTimeout(() => setSubmitStatus(null), 5000);
     } finally {
-      setSubmitting(false);
+      setIsSending(false);
     }
   };
 
@@ -123,14 +126,14 @@ const Contact = () => {
           }`}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900 dark:text-white">
-            Let’s {" "}
+            Let&apos;s{" "}
             <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
               Connect!
             </span>
           </h2>
           <p className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
-            I'm open to new opportunities, meaningful collaborations,
-or simply a friendly conversation—let’s connect.
+            I&apos;m open to new opportunities, meaningful collaborations,
+            or simply a friendly conversation—let&apos;s connect.
           </p>
 
           <div className="grid md:grid-cols-2 gap-12">
@@ -139,11 +142,6 @@ or simply a friendly conversation—let’s connect.
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                   Contact Me
                 </h3>
-                {/* <p className="text-gray-600 dark:text-gray-400 mb-6">
-                  I'm always open to discussing new projects, creative ideas, or
-                  opportunities to be part of your vision. Feel free to reach
-                  out through the contact form or connect with me directly.
-                </p> */}
               </div>
 
               <div className="space-y-4">
@@ -177,55 +175,55 @@ or simply a friendly conversation—let’s connect.
             </div>
 
             <div className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-900/20 rounded-2xl p-8 shadow-lg">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label
-                      htmlFor="name"
+                      htmlFor="from_name"
                       className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                     >
                       Your Name
                     </label>
                     <input
                       type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
+                      id="from_name"
+                      name="from_name"
+                      value={formData.from_name}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-lg border ${
-                        errors.name
+                        errors.from_name
                           ? "border-red-500 focus:ring-red-500"
                           : "border-gray-300 dark:border-gray-600 focus:ring-blue-600"
                       } bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:outline-none transition-colors`}
                       placeholder="John Doe"
                     />
-                    {errors.name && (
-                      <p className="mt-1 text-sm text-red-500">{errors.name}</p>
+                    {errors.from_name && (
+                      <p className="mt-1 text-sm text-red-500">{errors.from_name}</p>
                     )}
                   </div>
 
                   <div>
                     <label
-                      htmlFor="email"
+                      htmlFor="from_email"
                       className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                     >
                       Your Email
                     </label>
                     <input
                       type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
+                      id="from_email"
+                      name="from_email"
+                      value={formData.from_email}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-lg border ${
-                        errors.email
+                        errors.from_email
                           ? "border-red-500 focus:ring-red-500"
                           : "border-gray-300 dark:border-gray-600 focus:ring-blue-600"
                       } bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:outline-none transition-colors`}
                       placeholder="john@example.com"
                     />
-                    {errors.email && (
-                      <p className="mt-1 text-sm text-red-500">{errors.email}</p>
+                    {errors.from_email && (
+                      <p className="mt-1 text-sm text-red-500">{errors.from_email}</p>
                     )}
                   </div>
                 </div>
@@ -288,10 +286,10 @@ or simply a friendly conversation—let’s connect.
 
                 <button
                   type="submit"
-                  disabled={submitting}
-                  className="w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-semibold hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2"
+                  disabled={isSending}
+                  className="w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-semibold hover:shadow-xl hover:from-blue-700 hover:to-cyan-700 transform hover:-translate-y-1 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:hover:shadow-none flex items-center justify-center gap-2"
                 >
-                  {submitting ? (
+                  {isSending ? (
                     <>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       Sending...
@@ -305,14 +303,14 @@ or simply a friendly conversation—let’s connect.
                 </button>
 
                 {submitStatus === "success" && (
-                  <div className="flex items-center gap-2 p-4 bg-green-100 dark:bg-green-900/20 text-green-700 dark:text-green-400 rounded-lg">
+                  <div className="flex items-center gap-2 p-4 bg-green-100 dark:bg-green-900/20 text-green-700 dark:text-green-400 rounded-lg animate-fade-in">
                     <CheckCircle className="w-5 h-5" />
                     <span>Message sent successfully!</span>
                   </div>
                 )}
 
                 {submitStatus === "error" && (
-                  <div className="flex items-center gap-2 p-4 bg-red-100 dark:bg-red-900/20 text-red-700 dark:text-red-400 rounded-lg">
+                  <div className="flex items-center gap-2 p-4 bg-red-100 dark:bg-red-900/20 text-red-700 dark:text-red-400 rounded-lg animate-fade-in">
                     <XCircle className="w-5 h-5" />
                     <span>Failed to send message. Please try again.</span>
                   </div>
