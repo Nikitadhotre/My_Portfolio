@@ -212,7 +212,7 @@ const Skills = () => {
           name: "Node.js",
           icon: () => (
             <img
-              src="/Public/nodejs-icon.svg"
+              src="/nodejs-icon.svg"
               alt=""
                width="50"
               height="50"
@@ -442,7 +442,7 @@ const Skills = () => {
           name: "Postman",
           icon: () => (
             <img
-              src="/Public/Postman.svg"
+              src="/Postman.svg"
               alt="Postman"
               width="50"
               height="50"

@@ -48,7 +48,7 @@ const About = () => {
             <div className="mb-6 sm:mb-8 relative flex flex-col justify-center items-center">
               <div className="w-48 sm:w-56 md:w-64 lg:w-80 h-48 sm:h-56 md:h-64 lg:h-80 rounded-full overflow-hidden border-4 border-blue-600 dark:border-cyan-400 shadow-2xl transform hover:scale-105 transition-transform duration-300">
                 <img
-                  src="/Public/Nikita_Dhotre_Passport.jpg"
+                  src="/Nikita_Dhotre_Passport.jpg"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />

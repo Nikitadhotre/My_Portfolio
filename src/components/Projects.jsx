@@ -8,7 +8,7 @@ const sampleProjects = [
   title: 'CaseMate',
   description:
     'A responsive web application for managing and tracking case-related information with a clean UI, dynamic components, and structured data handling.',
-  image_url: '/Public/CaseMate_image.png',
+  image_url: '/CaseMate_image.png',
   tech_stack: ['React', 'Tailwind CSS', 'JavaScript'],
   github_url: 'https://github.com/username/portfolio',
   live_url: 'https://username.github.io/portfolio',
@@ -18,7 +18,7 @@ const sampleProjects = [
   title: 'Portfolio',
   description:
     'A personal developer portfolio built with a modern UI, dark/light theme, animated sections, and optimized component-based architecture to showcase projects and technical skills.',
-  image_url: '/Public/Portfolio_image.png',
+  image_url: '/Portfolio_image.png',
   tech_stack: ['React', 'Tailwind CSS', 'JavaScript'],
   github_url: 'https://github.com/Nikitadhotre/My_Portfolio.git',
   live_url: 'https://ecommerce-store.example.com',
@@ -28,7 +28,7 @@ const sampleProjects = [
   title: 'Arogyapath',
   description:
     'A health management system that tracks vaccination records, provides automated reminders, supports doctor verification, and includes role-based authentication with secure data handling.',
-  image_url: '/Public/Arogyapath_image.png',
+  image_url: '/Arogyapath_image.png',
   tech_stack: ['React', 'Node.js', 'Express', 'MongoDB'],
   github_url: 'https://github.com/username/ecommerce-store',
   live_url: 'https://ecommerce-store.example.com',
@@ -38,7 +38,7 @@ const sampleProjects = [
   title: 'Career Guide',
   description:
     'A career guidance platform that helps users explore career paths, view structured information, and access resources through an intuitive and responsive interface.',
-  image_url: '/Public/Career_Guidance_image.png',
+  image_url: '/Career_Guidance_image.png',
   tech_stack: ['React', 'Node.js', 'Express', 'MongoDB'],
   github_url: 'https://github.com/username/ecommerce-store',
   live_url: 'https://ecommerce-store.example.com',
@@ -48,7 +48,7 @@ const sampleProjects = [
   title: 'Nourish Together',
   description:
     'A community-driven web platform designed to connect food donors with people in need, featuring structured data management and a user-friendly interface for resource sharing.',
-  image_url: '/Public/Nourish_Together_image.png',
+  image_url: '/Nourish_Together_image.png',
   tech_stack: ['React', 'Node.js', 'Express', 'MongoDB'],
   github_url: 'https://github.com/Nikitadhotre/Nourish_Together.git',
   live_url: 'https://ecommerce-store.example.com',
