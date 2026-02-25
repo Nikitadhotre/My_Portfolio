@@ -1,4 +1,5 @@
 import { useTheme } from './hooks/useTheme';
+import { useSmoothScroll } from './hooks/useSmoothScroll';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -10,6 +11,7 @@ import Footer from './components/Footer';
 import AnimatedBackground from './components/AnimatedBackground';
 
 function App() {
+  useSmoothScroll();
   const { theme, toggleTheme } = useTheme();
 
   return (
