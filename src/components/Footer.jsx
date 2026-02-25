@@ -1,100 +1,22 @@
-import { Heart, Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Heart, ArrowUp } from 'lucide-react';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
-  const socialLinks = [
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: Mail, href: 'mailto:contact@example.com', label: 'Email' },
-  ];
-
-  const scrollToSection = (e, href) => {
-    e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const scrollToTop = () => {
+    document.querySelector('#home')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <footer className="bg-gradient-to-r from-blue-900 via-blue-800 to-cyan-900 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-white py-12">
+    <footer className="bg-gradient-to-r from-blue-900 via-blue-800 to-cyan-900 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-white py-12 relative">
+      {/* Scroll to top button */}
+      <button
+        onClick={scrollToTop}
+        className="absolute top-20 right-8 p-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+        aria-label="Scroll to top"
+      >
+        <ArrowUp className="w-6 h-6" />
+      </button>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* <div className="grid md:grid-cols-3 gap-8 mb-8">
-          <div>
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">
-              Portfolio
-            </h3>
-            <p className="text-gray-400 mb-4">
-              Building exceptional digital experiences with modern technologies and creative solutions.
-            </p>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="#home"
-                  onClick={(e) => scrollToSection(e, '#home')}
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  onClick={(e) => scrollToSection(e, '#about')}
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#projects"
-                  onClick={(e) => scrollToSection(e, '#projects')}
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
-                >
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  onClick={(e) => scrollToSection(e, '#contact')}
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Connect</h4>
-            <div className="flex gap-4">
-              {socialLinks.map((social, index) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={index}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-gray-800 rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:-translate-y-1"
-                    aria-label={social.label}
-                  >
-                    <Icon className="w-5 h-5" />
-                  </a>
-                );
-              })}
-            </div>
-          </div>
-        </div> */}
-
         <div className="border-t border-blue-700 pt-8 text-center">
           <p className="text-gray-400 flex items-center justify-center gap-2">
             Built with <Heart className="w-4 h-4 text-red-500 fill-current" /> by Nikita

@@ -8,7 +8,6 @@ import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import AnimatedBackground from './components/AnimatedBackground';
-import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const { theme, toggleTheme } = useTheme();
@@ -24,7 +23,6 @@ function App() {
       <Experience />
       <Contact />
       <Footer />
-      <ScrollToTop />
     </div>
   );
 }
