@@ -53,9 +53,6 @@ const About = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              {/* <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg">
-                Available for work
-              </div> */}
             </div>
 
             <div className="space-y-6">

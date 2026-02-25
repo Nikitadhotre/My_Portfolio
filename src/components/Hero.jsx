@@ -45,13 +45,24 @@ const Hero = () => {
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-400/20 rounded-full blur-3xl animate-pulse delay-700"></div>
+        
+        {/* Badge in top-right corner */}
+        <div className="absolute top-24 right-8">
+          <span className="inline-flex items-center gap-1.5 bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-blue-400/20 dark:to-cyan-400/20 border border-blue-600/20 dark:border-cyan-400/20 text-xs font-medium px-3 py-1.5 rounded-full text-gray-700 dark:text-gray-300 cursor-pointer hover:scale-105 transition-transform duration-200">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+            </span>
+            Available for work
+          </span>
+        </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-10">
         <div className="text-center">
           
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900 dark:text-white">
+          <h1 className="text-5xl md:text-7xl font-bold mb-2 text-gray-900 dark:text-white">
             Hi, I'm <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Nikita Dhotre</span>
           </h1>
 
