@@ -12,12 +12,20 @@
     <script>
       (function() {
         const favicon = document.getElementById('favicon');
-        const isDark = localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
-        if (isDark) {
-          favicon.href = 'data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"%3e%3cpath d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14"/%3e%3c/svg%3e';
-        } else {
-          favicon.href = 'data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23333" stroke-width="2"%3e%3cpath d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14"/%3e%3c/svg%3e';
-        }
+        const setFavicon = () => {
+          const isDark = localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (isDark) {
+            favicon.href = 'data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"%3e%3cpath d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14"/%3e%3c/svg%3e';
+          } else {
+            favicon.href = 'data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23333" stroke-width="2"%3e%3cpath d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14"/%3e%3c/svg%3e';
+          }
+        };
+        
+        setFavicon();
+        
+        // Listen for theme changes
+        const observer = new MutationObserver(setFavicon);
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
       })();
     </script>
   </head>
