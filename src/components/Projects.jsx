@@ -21,7 +21,7 @@ const sampleProjects = [
   image_url: '/Portfolio_image.png',
   tech_stack: ['React', 'Tailwind CSS', 'JavaScript'],
   github_url: 'https://github.com/Nikitadhotre/My_Portfolio.git',
-  live_url: 'https://ecommerce-store.example.com',
+  live_url: 'https://nikita-dhotre.vercel.app/',
 },
 {
   id: 3,
