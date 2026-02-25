@@ -500,7 +500,7 @@ const Skills = () => {
       skills: [
         {
           name: (
-            <span className="px-4 py-2 bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-blue-400/20 dark:to-cyan-400/20 border border-blue-600/20 dark:border-cyan-400/20 rounded-full text-gray-800 dark:text-gray-200 font-medium hover:scale-105 transition-transform duration-300">
+            <span className="px-2 sm:px-4 py-1 sm:py-2 bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-blue-400/20 dark:to-cyan-400/20 border border-blue-600/20 dark:border-cyan-400/20 rounded-full text-gray-800 dark:text-gray-200 font-medium hover:scale-105 transition-transform duration-300">
               Teamwork
             </span>
           ),
@@ -509,7 +509,7 @@ const Skills = () => {
         },
         {
           name: (
-            <span className="px-4 py-2 bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-blue-400/20 dark:to-cyan-400/20 border border-blue-600/20 dark:border-cyan-400/20 rounded-full text-gray-800 dark:text-gray-200 font-medium hover:scale-105 transition-transform duration-300">
+            <span className="px-2 sm:px-4 py-1 sm:py-2 bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-blue-400/20 dark:to-cyan-400/20 border border-blue-600/20 dark:border-cyan-400/20 rounded-full text-gray-800 dark:text-gray-200 font-medium hover:scale-105 transition-transform duration-300">
               Adaptability
             </span>
           ),
@@ -518,7 +518,7 @@ const Skills = () => {
         },
         {
           name: (
-            <span className="px-4 py-2 bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-blue-400/20 dark:to-cyan-400/20 border border-blue-600/20 dark:border-cyan-400/20 rounded-full text-gray-800 dark:text-gray-200 font-medium hover:scale-105 transition-transform duration-300">
+            <span className="px-2 sm:px-4 py-1 sm:py-2 bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-blue-400/20 dark:to-cyan-400/20 border border-blue-600/20 dark:border-cyan-400/20 rounded-full text-gray-800 dark:text-gray-200 font-medium hover:scale-105 transition-transform duration-300">
               Curiosity
             </span>
           ),
@@ -527,7 +527,7 @@ const Skills = () => {
         },
         {
           name: (
-            <span className="px-4 py-2 bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-blue-400/20 dark:to-cyan-400/20 border border-blue-600/20 dark:border-cyan-400/20 rounded-full text-gray-800 dark:text-gray-200 font-medium hover:scale-105 transition-transform duration-300">
+            <span className="px-2 sm:px-4 py-1 sm:py-2 bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-blue-400/20 dark:to-cyan-400/20 border border-blue-600/20 dark:border-cyan-400/20 rounded-full text-gray-800 dark:text-gray-200 font-medium hover:scale-105 transition-transform duration-300">
               Collaboration
             </span>
           ),
@@ -536,7 +536,7 @@ const Skills = () => {
         },
         {
           name: (
-            <span className="px-4 py-2 bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-blue-400/20 dark:to-cyan-400/20 border border-blue-600/20 dark:border-cyan-400/20 rounded-full text-gray-800 dark:text-gray-200 font-medium hover:scale-105 transition-transform duration-300">
+            <span className="px-2 sm:px-4 py-1 sm:py-2 bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-blue-400/20 dark:to-cyan-400/20 border border-blue-600/20 dark:border-cyan-400/20 rounded-full text-gray-800 dark:text-gray-200 font-medium hover:scale-105 transition-transform duration-300">
               Willingness to Learn
             </span>
           ),
@@ -585,20 +585,20 @@ const Skills = () => {
                   </div>
 
                   {category.title === 'Core Concepts' || category.title === "Soft Skills" ? (
-                    <div className="flex flex-wrap gap-4 justify-center gap-y-6">
+                    <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
                       {category.skills.map((skill, skillIndex) => (
                         <div
                           key={skillIndex}
-                          className="flex flex-col items-center gap-2"
+                          className="flex flex-col items-center gap-1"
                         >
                           {skill.icon && typeof skill.icon === "function" ? (
-                            <skill.icon className="w-10 h-10 object-contain" />
+                            <skill.icon className="w-8 h-8 sm:w-10 sm:h-10 object-contain" />
                           ) : skill.icon && skill.icon !== "" ? (
                             <img
                               src={skill.icon}
                               alt={`${skill.name} icon`}
-                              width="50"
-                              height="50"
+                              width="40"
+                              height="40"
                               className="object-contain"
                               style={
                                 skill.name === "Express"
@@ -607,29 +607,31 @@ const Skills = () => {
                               }
                             />
                           ) : null}
-                          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                          <span className={`text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 ${category.title === "Soft Skills" ? "px-2 sm:px-4 py-1 sm:py-2" : ""}`}>
                             {skill.name}
                           </span>
                         </div>
                       ))}
                     </div>
                   ) : (
-                    <div className="grid grid-cols-3 gap-8">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
                       {category.skills.map((skill, skillIndex) => (
                         <div
                           key={skillIndex}
-                          className="flex flex-col items-center gap-2"
+                          className="flex flex-col items-center gap-1"
                         >
                           {skill.icon && typeof skill.icon === "function" ? (
-                            <skill.icon className="w-10 h-10 object-contain" />
+                            <skill.icon className="w-8 h-8 sm:w-10 sm:h-10 object-contain" />
                           ) : skill.icon && skill.icon !== "" ? (
                             <img
                               src={skill.icon}
                               alt={`${skill.name} icon`}
-                              width="50" height="50" className="object-contain"
+                              width="40"
+                              height="40"
+                              className="object-contain"
                             />
                           ) : null}
-                          <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
+                          <span className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 text-center">
                             {skill.name}
                           </span>
                         </div>

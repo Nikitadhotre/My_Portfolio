@@ -75,15 +75,15 @@ const Hero = () => {
             Crafting beautiful, functional, and user-friendly digital experiences with modern technologies and best practices.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-10 sm:mb-12">
             <a
               href="https://drive.google.com/file/d/1Kg4HuQ2H_-C93PbKdCWtec8SzAo8UMsS/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full font-semibold hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 justify-center"
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full font-semibold hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 justify-center text-sm sm:text-base"
             >
               Download Resume
-              <FileText className="w-6 h-6" />
+              <FileText className="w-5 h-5 sm:w-6 sm:h-6" />
             </a>
             <a
               href="#projects"
@@ -91,14 +91,14 @@ const Hero = () => {
                 e.preventDefault();
                 document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
               }}
-            className="px-8 py-4 border-2 border-blue-600 dark:border-cyan-400 text-blue-600 dark:text-cyan-400 rounded-full font-semibold hover:bg-blue-600 dark:hover:bg-cyan-400 hover:text-white dark:hover:text-gray-900 transition-all duration-300 dark:bg-gray-800 dark:text-cyan-400"
+            className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-blue-600 dark:border-cyan-400 text-blue-600 dark:text-cyan-400 rounded-full font-semibold hover:bg-blue-600 dark:hover:bg-cyan-400 hover:text-white dark:hover:text-gray-900 transition-all duration-300 dark:bg-gray-800 dark:text-cyan-400 text-sm sm:text-base"
             >
               View Projects
             </a>
             <a
               href="#contact"
               onClick={scrollToContact}
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full font-semibold hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full font-semibold hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-sm sm:text-base"
             >
               Get In Touch
             </a>

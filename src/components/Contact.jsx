@@ -136,8 +136,8 @@ const Contact = () => {
             or simply a friendly conversation—let&apos;s connect.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-            <div className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
+            <div className="space-y-6 md:space-y-8">
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                   Contact Me
@@ -148,15 +148,15 @@ const Contact = () => {
                 {contactInfo.map((info, index) => {
                   const Icon = info.icon;
                   const content = (
-                    <div className="flex items-center gap-4 p-4 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-900/20 rounded-xl hover:shadow-lg transition-all duration-300">
-                      <div className="p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg">
-                        <Icon className="w-6 h-6 text-white" />
+                    <div className="flex items-center gap-4 p-3 sm:p-4 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-900/20 rounded-xl hover:shadow-lg transition-all duration-300">
+                      <div className="p-2 sm:p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg">
+                        <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                       </div>
                       <div>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                        <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
                           {info.label}
                         </p>
-                        <p className="font-semibold text-gray-900 dark:text-white">
+                        <p className="font-semibold text-gray-900 dark:text-white text-sm sm:text-base">
                           {info.value}
                         </p>
                       </div>
@@ -174,9 +174,9 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-900/20 rounded-2xl p-8 shadow-lg">
-              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-900/20 rounded-2xl p-5 sm:p-6 md:p-8 shadow-lg">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <label
                       htmlFor="from_name"

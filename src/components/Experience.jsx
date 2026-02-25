@@ -87,7 +87,7 @@ const Experience = () => {
               {experienceItems.map((item, index) => (
                 <div
                   key={index}
-                  className="relative pl-12 md:pl-16 mb-8 last:mb-0"
+                  className="relative pl-8 sm:pl-12 md:pl-16 mb-6 sm:mb-8 last:mb-0"
                 >
 
                   {/* Card - Different style with left accent border */}
@@ -170,15 +170,15 @@ const Experience = () => {
             {/* Timeline Container */}
             <div className="relative max-w-4xl mx-auto">
               {/* Vertical Line */}
-              <div className="absolute left-4 md:left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-600 via-cyan-500 to-cyan-600"></div>
+              <div className="absolute left-3 sm:left-4 md:left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-600 via-cyan-500 to-cyan-600"></div>
 
               {educationItems.map((item, index) => (
                 <div
                   key={index}
-                  className="relative pl-12 md:pl-16 mb-12 last:mb-0"
+                  className="relative pl-8 sm:pl-12 md:pl-16 mb-8 sm:mb-10 md:mb-12 last:mb-0"
                 >
                   {/* Dot */}
-                  <div className="absolute left-2 md:left-4 top-2 w-4 h-4 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 shadow-lg z-10">
+                  <div className="absolute left-1.5 sm:left-2 md:left-4 top-2 w-3 sm:w-4 h-3 sm:h-4 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 shadow-lg z-10">
                     <div className="absolute inset-0 rounded-full bg-white animate-pulse"></div>
                   </div>
 
