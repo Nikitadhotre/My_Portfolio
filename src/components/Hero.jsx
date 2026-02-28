@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
 import { ArrowDown, Github, Linkedin, Mail, FileText } from 'lucide-react';
+import { useTheme } from '../hooks/useTheme';
+import AnimatedBackground from './AnimatedBackground';
 
 
 const Hero = () => {
+  const { theme } = useTheme();
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
@@ -42,6 +45,7 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-cyan-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-cyan-900/20">
+      <AnimatedBackground theme={theme} />
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-400/20 rounded-full blur-3xl animate-pulse delay-700"></div>
@@ -126,7 +130,11 @@ const Hero = () => {
             </a>
             <a
               href="mailto:nikitadhotre1704@gmail.com"
-              className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full hover:bg-blue-600 dark:hover:bg-cyan-400 hover:text-white dark:text-white hover:dark:text-white transition-all duration-300 transform hover:-translate-y-1"
+              onClick={(e) => {
+                // Allow default mailto behavior - no preventDefault
+                console.log('Email icon clicked, opening mail client');
+              }}
+              className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full hover:bg-blue-600 dark:hover:bg-cyan-400 hover:text-white dark:text-white dark:hover:text-white transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
               aria-label="Email"
             >
               <Mail className="w-6 h-6" />

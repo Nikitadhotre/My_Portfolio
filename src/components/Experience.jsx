@@ -63,19 +63,18 @@ const Experience = () => {
         >
           {/* Section Heading */}
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900 dark:text-white">
-            Experience &{' '}
             <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-              Education
+              Experience
             </span>
           </h2>
 
           {/* Experience Section */}
           <div className="mb-16">
-            <h3 className="text-2xl md:text-3xl font-bold text-center mb-4 text-gray-900 dark:text-white">
+            {/* <h3 className="text-2xl md:text-3xl font-bold text-center mb-4 text-gray-900 dark:text-white">
               <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
                 Experience
               </span>
-            </h3>
+            </h3> */}
 
             <p className="text-center text-gray-600 dark:text-gray-400 mb-8 max-w-xl mx-auto">
               My professional work experience
@@ -157,11 +156,12 @@ const Experience = () => {
 
           {/* Education Section */}
           <div>
-            <h3 className="text-2xl md:text-3xl font-bold text-center mb-4 text-gray-900 dark:text-white">
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-                Education
-              </span>
-            </h3>
+            {/* Section Heading */}
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900 dark:text-white">
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+              Education
+            </span>
+          </h2>
 
             <p className="text-center text-gray-600 dark:text-gray-400 mb-8 max-w-xl mx-auto">
               My educational background

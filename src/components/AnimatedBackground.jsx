@@ -1,10 +1,17 @@
 import { useEffect, useRef } from 'react';
 
-const AnimatedBackground = () => {
+const AnimatedBackground = ({ theme = 'dark' }) => {
   const canvasRef = useRef(null);
+
+  // Only render in light mode
+  if (theme !== 'light') {
+    return null;
+  }
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return;
+    
     const ctx = canvas.getContext('2d');
     let animationFrameId;
     let particles = [];

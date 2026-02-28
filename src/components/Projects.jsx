@@ -13,16 +13,16 @@ const sampleProjects = [
   github_url: 'https://github.com/username/portfolio',
   live_url: 'https://username.github.io/portfolio',
 },
-{
-  id: 2,
-  title: 'Portfolio',
-  description:
-    'A personal developer portfolio built with a modern UI, dark/light theme, animated sections, and optimized component-based architecture to showcase projects and technical skills.',
-  image_url: '/Portfolio_image.png',
-  tech_stack: ['React', 'Tailwind CSS', 'JavaScript'],
-  github_url: 'https://github.com/Nikitadhotre/My_Portfolio.git',
-  live_url: 'https://nikita-dhotre.vercel.app/',
-},
+// {
+//   id: 2,
+//   title: 'Portfolio',
+//   description:
+//     'A personal developer portfolio built with a modern UI, dark/light theme, animated sections, and optimized component-based architecture to showcase projects and technical skills.',
+//   image_url: '/Portfolio_image.png',
+//   tech_stack: ['React', 'Tailwind CSS', 'JavaScript'],
+//   github_url: 'https://github.com/Nikitadhotre/My_Portfolio.git',
+//   live_url: 'https://nikita-dhotre.vercel.app/',
+// },
 {
   id: 3,
   title: 'Arogyapath',
