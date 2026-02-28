@@ -3,10 +3,12 @@ import { useEffect, useRef } from 'react';
 const AnimatedBackground = ({ theme = 'dark' }) => {
   const canvasRef = useRef(null);
 
-  // Only render in light mode
-  if (theme !== 'light') {
-    return null;
-  }
+  // Theme-based colors - darker colors for light mode, lighter for dark mode
+  const isDark = theme === 'dark';
+  const primaryColor = isDark ? '#60A5FA' : '#1E40AF'; // blue-400 for dark, blue-800 for light
+  const secondaryColor = isDark ? '#22D3EE' : '#0891B2'; // cyan-400 for dark, cyan-600 for light
+  const lineColor = isDark ? '#60A5FA' : '#1E40AF';
+  const opacity = isDark ? 0.4 : 0.8;
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -33,7 +35,7 @@ const AnimatedBackground = ({ theme = 'dark' }) => {
           vx: (Math.random() - 0.5) * 0.5,
           vy: (Math.random() - 0.5) * 0.5,
           alpha: Math.random() * 0.5 + 0.2,
-          color: Math.random() > 0.5 ? '#3B82F6' : '#06B6D4' // blue-500 or cyan-500
+          color: Math.random() > 0.5 ? primaryColor : secondaryColor
         });
       }
     };
@@ -67,7 +69,7 @@ const AnimatedBackground = ({ theme = 'dark' }) => {
           
           if (distance < 150) {
             ctx.beginPath();
-            ctx.strokeStyle = '#3B82F6';
+            ctx.strokeStyle = lineColor;
             ctx.globalAlpha = (1 - distance / 150) * 0.15;
             ctx.lineWidth = 1;
             ctx.moveTo(p1.x, p1.y);
@@ -85,22 +87,24 @@ const AnimatedBackground = ({ theme = 'dark' }) => {
     createParticles();
     drawParticles();
 
-    window.addEventListener('resize', () => {
+    const handleResize = () => {
       resizeCanvas();
       createParticles();
-    });
+    };
+
+    window.addEventListener('resize', handleResize);
 
     return () => {
       cancelAnimationFrame(animationFrameId);
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [primaryColor, secondaryColor, lineColor]);
 
   return (
     <canvas
       ref={canvasRef}
       className="fixed top-0 left-0 w-full h-full pointer-events-none z-0"
-      style={{ opacity: 0.6 }}
+      style={{ opacity }}
     />
   );
 };
