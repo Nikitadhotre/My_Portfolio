@@ -10,7 +10,7 @@ const sampleProjects = [
     'A responsive web application for managing and tracking case-related information with a clean UI, dynamic components, and structured data handling.',
   image_url: '/CaseMate_image.png',
   tech_stack: ['React', 'Tailwind CSS', 'JavaScript'],
-  github_url: 'https://github.com/username/portfolio',
+  github_url: 'https://github.com/Nikitadhotre/CaseMate',
   live_url: 'https://username.github.io/portfolio',
 },
 // {
@@ -30,7 +30,7 @@ const sampleProjects = [
     'A health management system that tracks vaccination records, provides automated reminders, supports doctor verification, and includes role-based authentication with secure data handling.',
   image_url: '/Arogyapath_image.png',
   tech_stack: ['React', 'Node.js', 'Express', 'MongoDB'],
-  github_url: 'https://github.com/username/ecommerce-store',
+  github_url: 'https://github.com/Nikitadhotre/Arogyapath',
   live_url: 'https://ecommerce-store.example.com',
 },
 {
@@ -40,7 +40,7 @@ const sampleProjects = [
     'A career guidance platform that helps users explore career paths, view structured information, and access resources through an intuitive and responsive interface.',
   image_url: '/Career_Guidance_image.png',
   tech_stack: ['React', 'Node.js', 'Express', 'MongoDB'],
-  github_url: 'https://github.com/username/ecommerce-store',
+  github_url: 'https://github.com/Nikitadhotre/Career-Guide',
   live_url: 'https://ecommerce-store.example.com',
 },
 {
@@ -51,7 +51,7 @@ const sampleProjects = [
   image_url: '/Nourish_Together_image.png',
   tech_stack: ['React', 'Node.js', 'Express', 'MongoDB'],
   github_url: 'https://github.com/Nikitadhotre/Nourish_Together.git',
-  live_url: 'https://ecommerce-store.example.com',
+  live_url: 'https://nourish-together-chi.vercel.app',
 },
   // Add more sample projects here
 ];
