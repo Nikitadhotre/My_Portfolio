@@ -11,7 +11,7 @@ const sampleProjects = [
   image_url: '/CaseMate_image.png',
   tech_stack: ['React', 'Tailwind CSS', 'JavaScript'],
   github_url: 'https://github.com/Nikitadhotre/CaseMate',
-  live_url: 'https://username.github.io/portfolio',
+  live_url: 'https://casemate-nu.vercel.app/',
 },
 // {
 //   id: 2,
