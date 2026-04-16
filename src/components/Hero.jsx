@@ -81,7 +81,7 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-10 sm:mb-12">
             <a
-              href="https://drive.google.com/file/d/1Kg4HuQ2H_-C93PbKdCWtec8SzAo8UMsS/view?usp=sharing"
+              href="/Nikita_Dhotre_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full font-semibold hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 justify-center text-sm sm:text-base"
@@ -95,7 +95,7 @@ const Hero = () => {
                 e.preventDefault();
                 document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
               }}
-            className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-blue-600 dark:border-cyan-400 text-blue-600 dark:text-cyan-400 rounded-full font-semibold hover:bg-blue-600 dark:hover:bg-cyan-400 hover:text-white dark:hover:text-gray-900 transition-all duration-300 dark:bg-gray-800 dark:text-cyan-400 text-sm sm:text-base"
+            className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-blue-600 dark:border-cyan-400 text-blue-600 dark:text-cyan-400 rounded-full font-semibold hover:bg-blue-600 dark:hover:bg-cyan-400 hover:text-white dark:hover:text-gray-900 transition-all duration-300 dark:bg-gray-800 text-sm sm:text-base"
             >
               View Projects
             </a>

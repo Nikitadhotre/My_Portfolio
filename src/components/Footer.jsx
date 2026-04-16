@@ -22,7 +22,7 @@ const Footer = () => {
     { name: 'GitHub', href: 'https://github.com/Nikitadhotre', icon: Github },
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/nikitadhotre/', icon: Linkedin },
     { name: 'Email', href: 'mailto:nikitadhotre1704@gmail.com', icon: Mail },
-    { name: 'Resume', href: 'https://drive.google.com/file/d/1Kg4HuQ2H_-C93PbKdCWtec8SzAo8UMsS/view?usp=sharing', icon: FileText },
+    { name: 'Resume', href: '/Nikita_Dhotre_Resume.pdf', icon: FileText },
   ];
 
   return (
